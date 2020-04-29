@@ -31,7 +31,8 @@ export default {
             status: 0
         },
       todolist: [],
-      uri: "http://laboweb.ecam.be/api/tasks/",
+      //uri: "http://laboweb.ecam.be/api/tasks/",
+      uri: "http://172.17.0.67:8000/api/tasks/",
       showCreate: false,
     };
   },

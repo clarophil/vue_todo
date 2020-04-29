@@ -13,27 +13,9 @@ export default {
   name: "app",
   components: { TodoList, Footer },
   data() {
-    return {
-      todolist: [],
-      uri: "http://laboweb.ecam.be/api/tasks",
-    };
+    return {};
   },
-  methods: {
-    get_todolist() {
-      axios
-        .get(this.uri)
-        .then((response) => {
-          this.todolist = response.data;
-          console.log(this.todolist);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    },
-  },
-  mounted() {
-
-  },
+  methods: {},
 };
 </script>
 
