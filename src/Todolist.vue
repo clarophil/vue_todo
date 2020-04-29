@@ -11,7 +11,7 @@
         <button v-on:click="create()">Save</button>
     </div>
     <div v-for="todo in todolist" v-bind:key="todo.idtask">
-      <Todo v-bind:todo="todo" @event_delete="del"  @event_update="update"></Todo>
+      <Todo v-bind:todo="todo" @event_delete="deleteTodo"  @event_update="update"></Todo>
     </div>
   </div>
 </template>
@@ -60,7 +60,7 @@ export default {
     });
       console.log("saved");
     },
-    del(id) {
+    deleteTodo(id) {
         axios.delete(this.uri + id).then((response) => {
             // let index = this.todolist.map(todo => todo.idtask).indexOf(id);
             // console.log(index);
